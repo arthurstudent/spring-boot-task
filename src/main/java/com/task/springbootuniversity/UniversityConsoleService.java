@@ -33,6 +33,9 @@ public class UniversityConsoleService implements CommandLineRunner {
 
         boolean exit = false;
         while (!exit) {
+
+            UniversityConsoleServiceUtils.showMainMenu();
+
             System.out.println(UniversityConsoleServiceUtils.ENTER_A_COMMAND);
             String command = scanner.nextLine();
 
@@ -72,7 +75,7 @@ public class UniversityConsoleService implements CommandLineRunner {
                 List<String> namesByKeyword = lectorService.findLectorsNamesByKeyword(template);
                 UniversityConsoleServiceUtils.showByKeyword(namesByKeyword);
 
-            } else if (command.equals("exit")) {
+            } else if (command.equals("Exit")) {
                 exit = true;
             } else {
                 System.out.println(UniversityConsoleServiceUtils.COMMAND_IS_NOT_RECOGNIZED);

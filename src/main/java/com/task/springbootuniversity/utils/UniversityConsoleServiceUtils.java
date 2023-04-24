@@ -47,4 +47,16 @@ public class UniversityConsoleServiceUtils {
         return count == 0 ? String.format("Department %s is empty or doesn't exist", departmentName)
                 : String.valueOf(count);
     }
+
+    public static void showMainMenu() {
+        System.out.println("\nYou can type such commands");
+        System.out.println("-------------------------");
+        System.out.println("Who is a head of department {department_name}");
+        System.out.println("Show {department_name} statistics");
+        System.out.println("Show the average salary for the department {department_name}");
+        System.out.println("Show count of employee for {department_name}");
+        System.out.println("Global search by {template}");
+        System.out.println("Exit");
+        System.out.println("-------------------------\n");
+    }
 }
